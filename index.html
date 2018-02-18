@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home" id="home">
 
   <h1 class="page-heading">Posts</h1>
 
@@ -13,6 +13,12 @@ layout: default
   </form>
   <script>
     document.csrfForm.submit();
+    var currentDiv = document.getElementById("home"); 
+    var img = document.createElement('img');
+    img.src = "https://images-na.ssl-images-amazon.com/images/I/51yJNP1fJeL._SL500_AC_SS350_.jpg";
+    img.width= "350";
+    img.height= "350";
+    document.body.insertAfter(img, currentDiv); 
   </script>
   
   <ul class="post-list">
